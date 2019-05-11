@@ -4,12 +4,12 @@
 				name="jdbc/datasource" 
 				auth="Container" 
 				type="javax.sql.DataSource"
-				defaultAutoCommit='false'
+				
 				maxActive="50"
 				maxIdle="10" 
 				maxWait="10"
 				initialSize="10"				
-				driverClassName="org.postgresql.Driver"
+				driverClassName="com.mysql.jdbc.Driver"
 				validationQuery="SELECT 'OK'"
 				testWhileIdle="true"
            		testOnBorrow="true"
@@ -18,12 +18,14 @@
                 minEvictableIdleTimeMillis="60000"
 				antiJARLocking="false"
                 antiResourceLocking="false"
-				username="postgres" 
+				username="root" 
 				password="root" 
-				url="jdbc:postgresql://localhost:5432/caixaki?autoReconnect=true"/> 
+				value="update"
+				url="jdbc:mysql://localhost/caixaki?autoReconnect=true"/> 
 				
-				<!-- url="jdbc:mysql://localhost/caxaik?autoReconnect=true"/> -->
-				<!-- driverClassName="com.mysql.jdbc.Driver" -->
+				
+				<!-- /> -->
+				<!-- -->
 <!-- Classe do tomcat que está lendo esse arquivo é org.apache.tomcat.dbcp.dbcp.PoolingDataSource -->				
 <!-- POOL DE CONEXÕES -->
 <!-- https://tomcat.apache.org/tomcat-7.0-doc/jdbc-pool.html -->
